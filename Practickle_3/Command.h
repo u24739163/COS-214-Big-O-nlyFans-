@@ -5,7 +5,7 @@
 #include "Users.h"
 class Command {
     protected:
-        ChatRoom * ChatRooms;
+        ChatRoom* room;
         string message;
         User fromUser;
     public:
