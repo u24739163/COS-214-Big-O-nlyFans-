@@ -13,11 +13,13 @@ class Command {
 };
 
 class SendMessageCommand : public Command {
-
+    public:
+        void execute();
 };
 
 class LogMessageCommand : public Command {
-
+    public:
+        void execute();
 };
 
 #endif

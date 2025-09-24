@@ -5,7 +5,7 @@
 #include "Command.h"
 class Users {
     protected:
-        ChatRoom * cahtRooms; 
+        ChatRoom * chatRooms; 
         string name;
         Command * commandQueue; 
     public:
