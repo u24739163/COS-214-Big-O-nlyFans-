@@ -4,11 +4,19 @@
 #include <iostream>
 
 int main() {
-    User user1("michaelsRISEup");
+    Michael user1("michaelsRISEup");
+    Mulondi user2("mulondiMurrrondi");
+    Mundael user3("epicMundaelchatter");
     
-    CtrlCat chatRoom;
-    
-    SendMessageCommand* send = new SendMessageCommand(chatRoom, user1, "goodbyw wworld");
+    CtrlCat catRoom;
+    catRoom.registerUser(user1);
+    catRoom.registerUser(user2);
+
+    Dogorithm dogRoom;
+    dogRoom.registerUser(user1);
+    dogRoom.registerUser(user3);
+
+    SendMessageCommand* send = new SendMessageCommand(catRoom, user1, "goodbyw wworld");
     LogMessageCommand* log = new LogMessageCommand(chatRoom, user1, "yo save ths shit pls");
     
     user1.addCommand(send);

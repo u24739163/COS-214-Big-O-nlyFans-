@@ -1,11 +1,13 @@
 #include "Users.h"
 #include "Command.h"
-void Users::send(string message, ChatRoom* room) {
-    
+void Users::send(string message, ChatRoom* room) 
+{
+        
 }
 
-void Users::receive(string message, User fromUser, ChatRoom* room) {
-    
+void Users::receive(string message, User fromUser, ChatRoom* room) 
+{
+        
 }
 
 void Users::addCommand(Command* command) {

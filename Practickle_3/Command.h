@@ -3,6 +3,8 @@
 
 #include "ChatRoom.h"
 #include "Users.h"
+class User;
+class ChatRoom;
 class Command {
     protected:
         ChatRoom room;
