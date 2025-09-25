@@ -1,9 +1,24 @@
 #include "Command.h"
 
-void SendMessageCommand::execute() {
-    room->sendMessage(fromUser, message);
+Command::Command(ChatRoom chatRoom, User user, string msg) 
+{
+    room = chatRoom;
+    fromUser = user;
+    message = msg;
 }
 
-void LogMessageCommand::execute() {
-    room->logMessage(fromUser, message);
+SendMessageCommand::SendMessageCommand(ChatRoom chatRoom, User user, string msg) 
+    : Command(chatRoom, user, msg) { }
+
+void SendMessageCommand::execute() 
+{
+    room.sendMessage(fromUser, message);
+}
+
+LogMessageCommand::LogMessageCommand(ChatRoom chatRoom, User user, string msg) 
+    : Command(chatRoom, user, msg) { }
+
+void LogMessageCommand::execute() 
+{
+    room.logMessage(fromUser, message);
 }
