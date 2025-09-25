@@ -1,7 +1,7 @@
 
-filesToDelete =  TestingMain tvremote
-filesToCompile =  tvremote.cpp
-filesInCoverageReport =  tvremote
+filesToDelete =  TestingMain Command ChatRoom Users
+filesToCompile =  TestingMain.cpp Command.cpp ChatRoom.cpp Users.cpp
+filesInCoverageReport =  TestingMain Command ChatRoom Users
 
 main:
 	g++ -g -std=c++11 ${filesToCompile} -o TestingMain

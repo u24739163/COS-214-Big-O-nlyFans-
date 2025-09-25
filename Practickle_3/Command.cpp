@@ -20,5 +20,5 @@ LogMessageCommand::LogMessageCommand(ChatRoom chatRoom, User user, string msg)
 
 void LogMessageCommand::execute() 
 {
-    room.logMessage(fromUser, message);
+    room.saveMessage(fromUser, message);
 }
