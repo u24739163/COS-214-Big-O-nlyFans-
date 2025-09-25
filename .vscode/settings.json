@@ -6,5 +6,6 @@
     "*.vue": "vue",
     "vector": "cpp",
     "xstring": "cpp"
-  }
+  },
+  "C_Cpp.errorSquiggles": "enabled"
 }
