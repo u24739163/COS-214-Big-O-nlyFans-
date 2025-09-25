@@ -1,0 +1,36 @@
+#include "Stepper.h"
+
+template <typename T>
+VectorStepper<T>::VectorStepper(vector<T>* vec) : steppingVector(vec), currentIndex(0) {}
+
+template <typename T>
+VectorStepper<T>::~VectorStepper() {}
+
+template <typename T>
+void VectorStepper<T>::first() {
+    currentIndex = 0;
+}
+
+template <typename T>
+void VectorStepper<T>::next() {
+    if (hasNext()) {
+        currentIndex++;
+    }
+}
+
+template <typename T>
+bool VectorStepper<T>::hasNext() {
+    return steppingVector && currentIndex < steppingVector->size();
+}
+
+template <typename T>
+T VectorStepper<T>::current() {
+    if (steppingVector && currentIndex < steppingVector->size()) {
+        return (*steppingVector)[currentIndex];
+    }
+    else
+    {
+        std::cout << "aww hell nah you tryna access chiefo.\n";
+        return T();
+    }
+}
