@@ -2,9 +2,9 @@
 
 Command::Command(ChatRoom chatRoom, User user, string msg) 
 {
-    room = chatRoom;
-    fromUser = user;
-    message = msg;
+    this->room = chatRoom;
+    this->fromUser = user;
+    this->message = msg;
 }
 
 SendMessageCommand::SendMessageCommand(ChatRoom chatRoom, User user, string msg) 
@@ -12,7 +12,7 @@ SendMessageCommand::SendMessageCommand(ChatRoom chatRoom, User user, string msg)
 
 void SendMessageCommand::execute() 
 {
-    room.sendMessage(fromUser, message);
+    room.sendMessage(message, fromUser);
 }
 
 LogMessageCommand::LogMessageCommand(ChatRoom chatRoom, User user, string msg) 
@@ -20,5 +20,5 @@ LogMessageCommand::LogMessageCommand(ChatRoom chatRoom, User user, string msg)
 
 void LogMessageCommand::execute() 
 {
-    room.saveMessage(fromUser, message);
+    room.saveMessage(message, fromUser);
 }

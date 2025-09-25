@@ -5,7 +5,8 @@
     "*.layout-template": "vue",
     "*.vue": "vue",
     "vector": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "ostream": "cpp"
   },
   "C_Cpp.errorSquiggles": "enabled"
 }

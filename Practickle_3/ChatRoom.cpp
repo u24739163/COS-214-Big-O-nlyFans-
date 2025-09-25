@@ -1,41 +1,64 @@
 #include "ChatRoom.h"
 
-// CtrlCat class function definitions
-void CtrlCat::registerUser(User* user) {
+void ChatRoom::registerUser(User user) {
     users.push_back(user);
 }
 
-void CtrlCat::sendMessage(string message, User* fromUser) {
-    for (User* user : users) {
-        if (user->getName() != fromUser->getName()) {
-            user->receive(message, fromUser, this);
+// Broadcast message to all users except the sender
+void ChatRoom::sendMessage(string message, User fromUser) {
+    for (User user : users) {
+        if (user != fromUser) {
+            user.receive(message, fromUser, this);
         }
     }
     saveMessage(message, fromUser);
 }
 
-void CtrlCat::saveMessage(string message, User* fromUser) {
-    string message = fromUser->getName() + ": " + message;
-    chatHistory.push_back(message);
+void ChatRoom::saveMessage(string message, User fromUser) {
+    string formattedMessage = fromUser.getName() + ": " + message;
+    chatHistory.push_back(formattedMessage);
 }
 
-void CtrlCat::removeUser(User* user) {
-
+void ChatRoom::removeUser(User user) {
+    users.erase(remove(users.begin(), users.end(), user), users.end());
 }
 
-// Dogorithm class function definitions
-void Dogorithm::registerUser(User* user) {
-    
+void CtrlCat::registerUser(User user) {
+    ChatRoom::registerUser(user);
+    cout << "CtrlCat: " << user.getName() << " has joined the kitten kontrol klub (kkk)." << endl;
 }
 
-void Dogorithm::sendMessage(string message, User* fromUser) {
-
+void CtrlCat::sendMessage(string message, User fromUser) {
+    cout << "CtrlCat: " << fromUser.getName() << " purrs: " << message << endl;
+    ChatRoom::sendMessage(message, fromUser);
 }
 
-void Dogorithm::saveMessage(string message, User* fromUser) {
-    
+void CtrlCat::saveMessage(string message, User fromUser) {
+    string formattedMessage = "CtrlCat: " + fromUser.getName() + ": " + message;
+    chatHistory.push_back(formattedMessage);
 }
 
-void Dogorithm::removeUser(User* user) {
+void CtrlCat::removeUser(User user) {
+    ChatRoom::removeUser(user);
+    cout << "CtrlCat: " << user.getName() << " has ran out of lives." << endl;
+}
 
+void Dogorithm::registerUser(User user) {
+    ChatRoom::registerUser(user);
+    cout << "Dogorithm: " << user.getName() << " was fed a bone." << endl;
+}
+
+void Dogorithm::sendMessage(string message, User fromUser) {
+    cout << "Dogorithm: " << fromUser.getName() << " barks: " << message << endl;
+    ChatRoom::sendMessage(message, fromUser);
+}
+
+void Dogorithm::saveMessage(string message, User fromUser) {
+    string formattedMessage = "Dogorithm: " + fromUser.getName() + ": " + message;
+    chatHistory.push_back(formattedMessage);
+}
+
+void Dogorithm::removeUser(User user) {
+    ChatRoom::removeUser(user);
+    cout << "Dogorithm: " << user.getName() << " ate chocolate." << endl;
 }

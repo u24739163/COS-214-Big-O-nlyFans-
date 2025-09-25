@@ -9,18 +9,18 @@ class Users {
         string name;
         vector<Command*> commandQueue; 
     public:
-        virtual void send(string message, ChatRoom* room) = 0;
-        virtual void receive(string message, User* fromUser, ChatRoom* room) = 0;
-        virtual void addCommand(Command* command) = 0;
-        virtual void executeAll() = 0;
+        void send(string message, ChatRoom* room);
+        void receive(string message, User fromUser, ChatRoom* room);
+        void addCommand(Command* command);
+        void executeAll();
 };
 
 class User : public Users {
+    private:
+        string name;
     public:
-        void send(string message, ChatRoom* room);
-        void receive(string message, User* fromUser, ChatRoom* room);
-        void addCommand(Command* command);
-        void executeAll();
+        User(string userName) : name(userName) {}
+        bool operator!=(const User& other) const;
         string getName() { return name; }
 };
  
