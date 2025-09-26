@@ -11,19 +11,19 @@ class Command {
         string message;
         User fromUser;
     public:
-        Command(ChatRoom chatRoom, User user, string msg);
+        Command(ChatRoom chatRoom, User user, string msg) : room(chatRoom), fromUser(user), message(msg) {};
         virtual void execute() = 0;
 };
 
 class SendMessageCommand : public Command {
     public:
-        SendMessageCommand(ChatRoom chatRoom, User user, string msg);
+        SendMessageCommand(ChatRoom chatRoom, User user, string msg) : Command(chatRoom, user, msg) {};
         void execute();
 };
 
 class LogMessageCommand : public Command {
     public:
-        LogMessageCommand(ChatRoom chatRoom, User user, string msg);
+        LogMessageCommand(ChatRoom chatRoom, User user, string msg) : Command(chatRoom, user, msg) {};
         void execute();
 };
 
