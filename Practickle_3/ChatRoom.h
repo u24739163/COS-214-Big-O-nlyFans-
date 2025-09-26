@@ -1,10 +1,10 @@
 #ifndef CHATROOM_H
 #define CHATROOM_H
 
-#include <iostream>
-#include <vector>
 #include "Users.h"
+#include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class ChatRoom {

@@ -3,6 +3,8 @@
 
 #include "ChatRoom.h"
 #include "Command.h"
+class ChatRoom;
+class Command;
 class Users {
     protected:
         vector<ChatRoom*> chatRooms;
@@ -15,12 +17,27 @@ class Users {
         void executeAll();
 };
 
-class User : public Users {
+class Mulondi : public Users {
     private:
         string name;
     public:
-        User(string userName) : name(userName) {}
-        bool operator!=(const User& other) const;
+        Mulondi(string userName) : name(userName) {}
+        string getName() { return name; }
+};
+
+class Michael : public Users {
+    private:
+        string name;
+    public:
+        Michael(string userName) : name(userName) {}
+        string getName() { return name; }
+};
+
+class Mundael : public Users {
+    private:
+        string name;
+    public:
+        Mundael(string userName) : name(userName) {}
         string getName() { return name; }
 };
  

@@ -4,7 +4,6 @@ void ChatRoom::registerUser(User user) {
     users.push_back(user);
 }
 
-// Broadcast message to all users except the sender
 void ChatRoom::sendMessage(string message, User fromUser) {
     for (User user : users) {
         if (user != fromUser) {
