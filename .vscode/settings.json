@@ -6,7 +6,8 @@
     "*.vue": "vue",
     "vector": "cpp",
     "xstring": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "iostream": "cpp"
   },
   "C_Cpp.errorSquiggles": "enabled"
 }

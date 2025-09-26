@@ -1,8 +1,10 @@
 
 #include "Users.h"
+#include "Command.h"
+
 void Users::send(string message, ChatRoom room) {
-    addCommand(new SendMessageCommand(room, *this, message));
-    addCommand(new LogMessageCommand(room, *this, message));
+    addCommand(new SendMessageCommand(&room, this, message));
+    addCommand(new LogMessageCommand(&room, this, message));
 }
 
 void Users::receive(string message, Users fromUser, ChatRoom room) {
@@ -21,5 +23,9 @@ void Users::executeAll() {
 }
 
 bool Users::operator!=(const Users& other) const {
-    return name != other.name;
+    return name != other.getName();
+}
+
+bool Users::operator==(const Users& other) const {
+    return name == other.getName();
 }

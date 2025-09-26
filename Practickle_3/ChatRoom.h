@@ -9,8 +9,8 @@ using namespace std;
 
 class ChatRoom {
     protected:
-        vector<Users> users;
-        vector<string> chatHistory;
+        std::vector<Users> users;
+        std::vector<string> chatHistory;
     public:
         virtual void registerUser(Users user);
         virtual void sendMessage(string message, Users fromUser);

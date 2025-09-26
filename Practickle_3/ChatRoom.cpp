@@ -1,4 +1,5 @@
 #include "ChatRoom.h"
+#include <algorithm>
 
 void ChatRoom::registerUser(Users user) {
     users.push_back(user);
