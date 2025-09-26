@@ -7,30 +7,36 @@ template <typename T>
 VectorStepper<T>::~VectorStepper() {}
 
 template <typename T>
-void VectorStepper<T>::first() {
+void VectorStepper<T>::first() 
+{
     currentIndex = 0;
 }
 
 template <typename T>
-void VectorStepper<T>::next() {
-    if (hasNext()) {
+void VectorStepper<T>::next() 
+{
+    if (hasNext()) 
+    {
         currentIndex++;
     }
 }
 
 template <typename T>
-bool VectorStepper<T>::hasNext() {
+bool VectorStepper<T>::hasNext() 
+{
     return steppingVector && currentIndex < steppingVector->size();
 }
 
 template <typename T>
-T VectorStepper<T>::current() {
-    if (steppingVector && currentIndex < steppingVector->size()) {
+T VectorStepper<T>::current() 
+{
+    if (steppingVector && currentIndex < steppingVector->size()) 
+    {
         return (*steppingVector)[currentIndex];
     }
     else
     {
-        std::cout << "aww hell nah you tryna access chiefo.\n";
+        std::cout << "aww hell nah either you tryna access an out of bounds, or steppingVector don't exist yet chiefo.\n";
         return T();
     }
 }
