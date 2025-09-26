@@ -12,9 +12,11 @@ class Users {
         vector<Command*> commandQueue; 
     public:
         void send(string message, ChatRoom room);
-        void receive(string message, User fromUser, ChatRoom room);
+        void receive(string message, Users fromUser, ChatRoom room);
         void addCommand(Command* command);
         void executeAll();
+        bool operator!=(const Users& other) const;
+        string getName() { return name; }
 };
 
 class Mulondi : public Users {

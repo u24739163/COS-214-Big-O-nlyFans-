@@ -9,21 +9,21 @@ class Command {
     protected:
         ChatRoom room;
         string message;
-        User fromUser;
+        Users fromUser;
     public:
-        Command(ChatRoom chatRoom, User user, string msg) : room(chatRoom), fromUser(user), message(msg) {};
+        Command(ChatRoom chatRoom, Users user, string msg) : room(chatRoom), fromUser(user), message(msg) {};
         virtual void execute() = 0;
 };
 
 class SendMessageCommand : public Command {
     public:
-        SendMessageCommand(ChatRoom chatRoom, User user, string msg) : Command(chatRoom, user, msg) {};
+        SendMessageCommand(ChatRoom chatRoom, Users user, string msg) : Command(chatRoom, user, msg) {};
         void execute();
 };
 
 class LogMessageCommand : public Command {
     public:
-        LogMessageCommand(ChatRoom chatRoom, User user, string msg) : Command(chatRoom, user, msg) {};
+        LogMessageCommand(ChatRoom chatRoom, Users user, string msg) : Command(chatRoom, user, msg) {};
         void execute();
 };
 

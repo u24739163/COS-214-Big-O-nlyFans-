@@ -1,13 +1,12 @@
+
 #include "Users.h"
-#include "Command.h"
 void Users::send(string message, ChatRoom room) {
-    addCommand(new SendMessageCommand(*this, room, message));
+    addCommand(new SendMessageCommand(room, *this, message));
     addCommand(new LogMessageCommand(room, *this, message));
 }
 
-void Users::receive(string message, User fromUser, ChatRoom room) {
-    Command *receiveCmd = new ReceiveMessageCommand(room, fromUser, *this, message);
-    addCommand(receiveCmd);
+void Users::receive(string message, Users fromUser, ChatRoom room) {
+    cout << name << " received a message from " << fromUser.getName() << " in chat room: " << message << endl;
 }
 
 void Users::addCommand(Command* command) {
@@ -21,6 +20,6 @@ void Users::executeAll() {
     commandQueue.clear();
 }
 
-bool User::operator!=(const User& other) const {
+bool Users::operator!=(const Users& other) const {
     return name != other.name;
 }
