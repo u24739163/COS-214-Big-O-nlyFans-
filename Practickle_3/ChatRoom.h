@@ -9,30 +9,30 @@ using namespace std;
 
 class ChatRoom {
     protected:
-        vector<User> users;
+        vector<Users> users;
         vector<string> chatHistory;
     public:
-        virtual void registerUser(User user);
-        virtual void sendMessage(string message, User fromUser);
-        virtual void saveMessage(string message, User fromUser);
-        virtual void removeUser(User fromUser); 
+        virtual void registerUser(Users user);
+        virtual void sendMessage(string message, Users fromUser);
+        virtual void saveMessage(string message, Users fromUser);
+        virtual void removeUser(Users fromUser);
 };
 
 class CtrlCat : public ChatRoom {
     private:
-        void registerUser(User user);
-        void sendMessage(string message, User fromUser);
-        void saveMessage(string message, User fromUser);
-        void removeUser(User fromUser);
+        void registerUser(Users user);
+        void sendMessage(string message, Users fromUser);
+        void saveMessage(string message, Users fromUser);
+        void removeUser(Users fromUser);
     public:
 };
 
 class Dogorithm : public ChatRoom {
     private:
-        void registerUser(User user);
-        void sendMessage(string message, User fromUser);
-        void saveMessage(string message, User fromUser);
-        void removeUser(User fromUser);
+        void registerUser(Users user);
+        void sendMessage(string message, Users fromUser);
+        void saveMessage(string message, Users fromUser);
+        void removeUser(Users fromUser);
     public:
 };
 
