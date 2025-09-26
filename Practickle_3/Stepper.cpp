@@ -7,9 +7,18 @@ template <typename T>
 VectorStepper<T>::~VectorStepper() {}
 
 template <typename T>
-void VectorStepper<T>::first() 
+T VectorStepper<T>::first() 
 {
     currentIndex = 0;
+    if (steppingVector && !steppingVector->empty()) 
+    {
+        return (*steppingVector)[currentIndex];
+    }
+    else
+    {
+        std::cout << "aww hell nah either you tryna access an out of bounds, or steppingVector don't exist yet chiefo.\n";
+        return T();
+    }
 }
 
 template <typename T>
