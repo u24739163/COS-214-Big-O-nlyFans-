@@ -9,8 +9,8 @@ class Users {
         string name;
         vector<Command*> commandQueue; 
     public:
-        void send(string message, ChatRoom* room);
-        void receive(string message, User fromUser, ChatRoom* room);
+        void send(string message, ChatRoom room);
+        void receive(string message, User fromUser, ChatRoom room);
         void addCommand(Command* command);
         void executeAll();
 };

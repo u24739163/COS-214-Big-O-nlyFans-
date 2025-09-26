@@ -23,6 +23,7 @@ void ChatRoom::removeUser(User user) {
     users.erase(remove(users.begin(), users.end(), user), users.end());
 }
 
+
 void CtrlCat::registerUser(User user) {
     ChatRoom::registerUser(user);
     cout << "CtrlCat: " << user.getName() << " has joined the kitten kontrol klub (kkk)." << endl;
@@ -42,6 +43,7 @@ void CtrlCat::removeUser(User user) {
     ChatRoom::removeUser(user);
     cout << "CtrlCat: " << user.getName() << " has ran out of lives." << endl;
 }
+
 
 void Dogorithm::registerUser(User user) {
     ChatRoom::registerUser(user);
