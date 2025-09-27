@@ -17,12 +17,14 @@ int main()
 
     Stepper<Users*>* userStepper = userVector.createStepper();
     cout << "created the iterator using Stepper interfacing VectorStepper\n";
-    cout << "first item: " << userStepper->first();
+    cout << "first item: " << userStepper->first()->getName() << endl;
 
+    int count = 1;
     while (userStepper->hasNext())
     {
-        cout << "Current User: " << userStepper->current()->getName() << endl;
+        cout << " User nr" << count << ": " << userStepper->current()->getName() << endl;
         userStepper->next();
+        count++;
     }
 
     delete userStepper;
