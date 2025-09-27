@@ -10,8 +10,8 @@ using namespace std;
 
 class ChatRoom {
     protected:
-        std::vector<Users> users;
-        std::vector<string> chatHistory;
+        VectorFather<Users> users;
+        VectorFather<string> chatHistory;
     public:
         virtual void registerUser(Users user);
         virtual void sendMessage(string message, Users fromUser);
@@ -21,20 +21,22 @@ class ChatRoom {
 
 class CtrlCat : public ChatRoom {
     private:
-        void registerUser(Users user);
-        void sendMessage(string message, Users fromUser);
-        void saveMessage(string message, Users fromUser);
-        void removeUser(Users fromUser);
+
     public:
+        void registerUser(Users user) override;
+        void sendMessage(string message, Users fromUser) override;
+        void saveMessage(string message, Users fromUser) override;
+        void removeUser(Users fromUser) override;
 };
 
 class Dogorithm : public ChatRoom {
     private:
-        void registerUser(Users user);
-        void sendMessage(string message, Users fromUser);
-        void saveMessage(string message, Users fromUser);
-        void removeUser(Users fromUser);
+    
     public:
+        void registerUser(Users user) override;
+        void sendMessage(string message, Users fromUser) override;
+        void saveMessage(string message, Users fromUser) override;
+        void removeUser(Users fromUser) override;
 };
 
 #endif

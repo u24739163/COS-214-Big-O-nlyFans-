@@ -34,7 +34,35 @@ bool VectorFather<T>::isEmpty()
 }
 
 template <typename T>
+vector<T>* VectorFather<T>::getVector() {
+    return &list;
+}
+
+template <typename T>
 vector<T>* VectorFather<T>::getVector() 
 {
     return &list;
+}
+
+template <typename T>
+vector<T>::iterator VectorFather<T>::begin() 
+{
+    return list.begin();
+}
+template <typename T>
+vector<T>::iterator VectorFather<T>::end() 
+{
+    return list.end();
+}
+
+template <typename T>
+vector<T>::iterator VectorFather<T>::erase(vector<T>::iterator pos) 
+{
+    return list.erase(pos);
+}
+
+template <typename T>
+vector<T>::iterator VectorFather<T>::erase(vector<T>::iterator first, vector<T>::iterator last) 
+{
+    return list.erase(first, last);
 }

@@ -1,26 +1,48 @@
 #include "ChatRoom.h"
-#include <algorithm>
 
 void ChatRoom::registerUser(Users user) {
-    users.push_back(user);
+    Stepper<Users>* stepper = users.createStepper();
+    Users currentUser = stepper->first();
+    while (stepper->hasNext()) {
+        if (currentUser == user) {
+            cout << "User " << user.getName() << " is already registered in this chat room." << endl;
+            delete stepper;
+            return;
+        }
+        stepper->next();
+        currentUser = stepper->current();
+    }
+    users.addItem(user);
 }
 
 void ChatRoom::sendMessage(string message, Users fromUser) {
-    for (Users user : users) {
-        if (user != fromUser) {
-            user.receive(message, fromUser, *this);
+    Stepper<Users>* stepper = users.createStepper();
+    Users currentUser = stepper->first();
+    while (stepper->hasNext()) {
+        if (currentUser != fromUser) {
+            currentUser.receive(message, fromUser, *this);
         }
+        stepper->next();
+        currentUser = stepper->current();
     }
     saveMessage(message, fromUser);
 }
 
 void ChatRoom::saveMessage(string message, Users fromUser) {
     string formattedMessage = fromUser.getName() + ": " + message;
-    chatHistory.push_back(formattedMessage);
+    chatHistory.addItem(formattedMessage);
 }
 
 void ChatRoom::removeUser(Users user) {
-    users.erase(remove(users.begin(), users.end(), user), users.end());
+    Stepper<Users>* stepper = users.createStepper();
+        while (stepper->hasNext()) {
+            if (stepper->current() == user) {
+                users.erase(users.begin() + stepper->getCurrentIndex());
+                break;
+            }
+            stepper->next();
+        }
+        delete stepper;
 }
 
 
@@ -36,7 +58,7 @@ void CtrlCat::sendMessage(string message, Users fromUser) {
 
 void CtrlCat::saveMessage(string message, Users fromUser) {
     string formattedMessage = "CtrlCat: " + fromUser.getName() + ": " + message;
-    chatHistory.push_back(formattedMessage);
+    chatHistory.addItem(formattedMessage);
 }
 
 void CtrlCat::removeUser(Users user) {
@@ -57,7 +79,7 @@ void Dogorithm::sendMessage(string message, Users fromUser) {
 
 void Dogorithm::saveMessage(string message, Users fromUser) {
     string formattedMessage = "Dogorithm: " + fromUser.getName() + ": " + message;
-    chatHistory.push_back(formattedMessage);
+    chatHistory.addItem(formattedMessage);
 }
 
 void Dogorithm::removeUser(Users user) {

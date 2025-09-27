@@ -13,6 +13,7 @@ class Stepper {
         virtual void next() = 0;
         virtual bool hasNext() = 0;
         virtual T current() = 0;
+        virtual int getCurrentIndex() = 0;
         virtual ~Stepper() {}
 };
 
@@ -53,6 +54,11 @@ class VectorStepper : public Stepper<T> {
                 return T();
             }
         }
+
+        int getCurrentIndex() {
+            return currentIndex;
+        }
+
 };
 
 #endif
