@@ -9,6 +9,11 @@ main:
 clean:
 	rm *.o *.gcov *.gcda *.gcno *.gz *.html *.css output.txt coverage.txt -f ${filesToDelete}
 
+all:
+	make clean
+	make main
+	./TestingMain
+
 coverage:
 	make clean
 	g++ -g --coverage -dumpbase '' ${filesToCompile} -o main

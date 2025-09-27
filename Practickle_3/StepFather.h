@@ -20,13 +20,30 @@ class VectorFather : public StepFather<T> {
     private:
         vector<T> list;
     public:
-        VectorFather();
-        ~VectorFather();
-        Stepper<T>* createStepper() override;
-        void addItem(T item) override;
-        void removeItem() override;
-        bool isEmpty() override;
-        vector<T>* getVector();
+        VectorFather() {}
+        ~VectorFather() {}
+
+        Stepper<T>* createStepper() override {
+            return new VectorStepper<T>(&list);
+        }
+
+        void addItem(T item) override {
+            list.push_back(item);
+        }
+
+        void removeItem() override {
+            if (!list.empty()) {
+                list.pop_back();
+            }
+        }
+
+        bool isEmpty() override {
+            return list.empty();
+        }
+
+        vector<T>* getVector() {
+            return &list;
+        }
 };
 
 #endif

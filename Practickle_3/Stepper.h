@@ -22,12 +22,37 @@ class VectorStepper : public Stepper<T> {
         vector<T>* steppingVector;
         int currentIndex;
     public:
-        VectorStepper(vector<T>* vec);
-        ~VectorStepper();
-        T first();
-        void next();
-        bool hasNext();
-        T current();
+        VectorStepper(vector<T>* vec) : steppingVector(vec), currentIndex(0) {}
+        ~VectorStepper() {}
+
+        T first() {
+            currentIndex = 0;
+            if (steppingVector && !steppingVector->empty()) {
+                return (*steppingVector)[currentIndex];
+            } else {
+                std::cout << "aww hell nah either you tryna access an out of bounds, or steppingVector don't exist yet chiefo.\n";
+                return T();
+            }
+        }
+
+        void next() {
+            if (hasNext()) {
+                currentIndex++;
+            }
+        }
+
+        bool hasNext() {
+            return steppingVector && currentIndex < steppingVector->size();
+        }
+
+        T current() {
+            if (steppingVector && currentIndex < steppingVector->size()) {
+                return (*steppingVector)[currentIndex];
+            } else {
+                std::cout << "aww hell nah either you tryna access an out of bounds, or steppingVector don't exist yet chiefo.\n";
+                return T();
+            }
+        }
 };
 
 #endif
