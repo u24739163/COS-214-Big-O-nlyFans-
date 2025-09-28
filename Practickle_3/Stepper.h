@@ -31,7 +31,7 @@ class VectorStepper : public Stepper<T> {
             if (steppingVector && !steppingVector->empty()) {
                 return (*steppingVector)[currentIndex];
             } else {
-                std::cout << "aww hell nah either you tryna access an out of bounds, or steppingVector don't exist yet chiefo.\n";
+                //std::cout << "aww hell nah either you tryna access an out of bounds, or steppingVector don't exist yet chiefo.\n";
                 return T();
             }
         }
@@ -50,7 +50,7 @@ class VectorStepper : public Stepper<T> {
             if (steppingVector && currentIndex < steppingVector->size()) {
                 return (*steppingVector)[currentIndex];
             } else {
-                std::cout << "aww hell nah either you tryna access an out of bounds, or steppingVector don't exist yet chiefo.\n";
+                //std::cout << "aww hell nah either you tryna access an out of bounds, or steppingVector don't exist yet chiefo.\n";
                 return T();
             }
         }

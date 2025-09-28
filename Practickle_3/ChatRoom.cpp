@@ -16,6 +16,7 @@ void ChatRoom::registerUser(Users user) {
 }
 
 void ChatRoom::sendMessage(string message, Users fromUser) {
+    cout << fromUser.getName() << " says: " << message << endl;
     Stepper<Users>* stepper = users.createStepper();
     Users currentUser = stepper->first();
     while (stepper->hasNext()) {
@@ -25,7 +26,6 @@ void ChatRoom::sendMessage(string message, Users fromUser) {
         stepper->next();
         currentUser = stepper->current();
     }
-    saveMessage(message, fromUser);
 }
 
 void ChatRoom::saveMessage(string message, Users fromUser) {
@@ -43,6 +43,27 @@ void ChatRoom::removeUser(Users user) {
             stepper->next();
         }
         delete stepper;
+}
+
+void ChatRoom::printChatHistory() {
+    cout << "Chat history size: " << chatHistory.getVector()->size() << endl; 
+    Stepper<string>* stepper = chatHistory.createStepper();
+    stepper->first();
+    while (stepper->hasNext()) {
+        cout << " " << stepper->current() << endl;
+        stepper->next();
+    }
+    delete stepper;
+}
+
+void ChatRoom::printUsers() {
+    Stepper<Users>* stepper = users.createStepper();
+    stepper->first();
+    while (stepper->hasNext()) {
+        cout << " " << stepper->current().getName() << endl;
+        stepper->next();
+    }
+    delete stepper;
 }
 
 
@@ -66,6 +87,15 @@ void CtrlCat::removeUser(Users user) {
     cout << "CtrlCat: " << user.getName() << " has ran out of lives." << endl;
 }
 
+void CtrlCat::printChatHistory() {
+    cout << "CtrlCat Chat History:" << endl;
+    ChatRoom::printChatHistory();
+}
+
+void CtrlCat::printUsers() {
+    cout << "CtrlCat Users:" << endl;
+    ChatRoom::printUsers();
+}
 
 void Dogorithm::registerUser(Users user) {
     ChatRoom::registerUser(user);
@@ -85,4 +115,14 @@ void Dogorithm::saveMessage(string message, Users fromUser) {
 void Dogorithm::removeUser(Users user) {
     ChatRoom::removeUser(user);
     cout << "Dogorithm: " << user.getName() << " ate chocolate." << endl;
+}
+
+void Dogorithm::printChatHistory() {
+    cout << "Dogorithm Chat History:" << endl;
+    ChatRoom::printChatHistory();
+}
+
+void Dogorithm::printUsers() {
+    cout << "Dogorithm Users:" << endl;
+    ChatRoom::printUsers();
 }

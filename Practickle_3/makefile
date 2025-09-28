@@ -12,6 +12,7 @@ clean:
 all:
 	make clean
 	make main
+	clear
 	./TestingMain
 
 coverage:

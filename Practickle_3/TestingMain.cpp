@@ -7,47 +7,54 @@ int main()
     // cout << "Iterator Demo:\n";
     // VectorFather<Users*> userVector;
     
-    Michael user1("michaelsRISEup");
-    Mulondi user2("mulondiMurrrondi");
-    Mundael user3("epicMundaelchatter");
-
+    
     // userVector.addItem(&user1);
     // userVector.addItem(&user2);
     // userVector.addItem(&user3);
-
+    
     // Stepper<Users*>* userStepper = userVector.createStepper();
     // cout << "created the iterator using Stepper interfacing VectorStepper\n";
     // cout << "first item: " << userStepper->first()->getName() << endl;
-
+    
     // int count = 1;
     // while (userStepper->hasNext())
     // {
-    //     cout << " User nr" << count << ": " << userStepper->current()->getName() << endl;
-    //     userStepper->next();
-    //     count++;
-    // }
+        //     cout << " User nr" << count << ": " << userStepper->current()->getName() << endl;
+        //     userStepper->next();
+        //     count++;
+        // }
+        
+        // delete userStepper;
+        
+        ////////////////////////////////////////
+    Michael user1("Alice");
+    Mulondi user2("Bob");
+    Mundael user3("Charlie");
 
-    // delete userStepper;
-    
-    ////////////////////////////////////////
     CtrlCat catRoom;
     catRoom.registerUser(user1);
     catRoom.registerUser(user2);
+    catRoom.registerUser(user3);
 
     Dogorithm dogRoom;
     dogRoom.registerUser(user1);
     dogRoom.registerUser(user3);
 
-    SendMessageCommand* send = new SendMessageCommand(&catRoom, &user1, "goodbyw wworld");
-    LogMessageCommand* log = new LogMessageCommand(&catRoom, &user1, "yo save ths shit pls");
 
-    user1.addCommand(send);
-    user1.addCommand(log);
+    user1.send("Hello everyone!", catRoom);
+    user2.send("Hi Alice!", catRoom);
+    user3.send("Hey folks!", catRoom);
+    user1.send("Woof woof!", dogRoom);
+    dogRoom.registerUser(user2);
+    user3.send("Bark bark!", dogRoom);
+    user2.send("Nah yall are weird", dogRoom);
+    dogRoom.removeUser(user2);
+
+    catRoom.printChatHistory();
+    catRoom.printUsers();
     
-    user1.executeAll();
-    
-    delete send;
-    delete log;
+    dogRoom.printChatHistory();
+    dogRoom.printUsers();
     
     return 0;
 }
