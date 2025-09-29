@@ -1,5 +1,5 @@
 #include "ChatRoom.h"
-
+#include "Memento.h"
 void ChatRoom::registerUser(Users user) {
     Stepper<Users>* stepper = users.createStepper();
     Users currentUser = stepper->first();
@@ -16,12 +16,11 @@ void ChatRoom::registerUser(Users user) {
 }
 
 void ChatRoom::sendMessage(string message, Users fromUser) {
-    cout << fromUser.getName() << " says: " << message << endl;
     Stepper<Users>* stepper = users.createStepper();
     Users currentUser = stepper->first();
     while (stepper->hasNext()) {
         if (currentUser != fromUser) {
-            currentUser.receive(message, fromUser, *this);
+            currentUser.receive(message, fromUser, this);
         }
         stepper->next();
         currentUser = stepper->current();
@@ -87,15 +86,15 @@ void CtrlCat::removeUser(Users user) {
     cout << "CtrlCat: " << user.getName() << " has ran out of lives." << endl;
 }
 
-void CtrlCat::printChatHistory() {
-    cout << "CtrlCat Chat History:" << endl;
-    ChatRoom::printChatHistory();
-}
+// void CtrlCat::printChatHistory() {
+//     cout << "CtrlCat Chat History:" << endl;
+//     ChatRoom::printChatHistory();
+// }
 
-void CtrlCat::printUsers() {
-    cout << "CtrlCat Users:" << endl;
-    ChatRoom::printUsers();
-}
+// void CtrlCat::printUsers() {
+//     cout << "CtrlCat Users:" << endl;
+//     ChatRoom::printUsers();
+// }
 
 void Dogorithm::registerUser(Users user) {
     ChatRoom::registerUser(user);
@@ -117,12 +116,28 @@ void Dogorithm::removeUser(Users user) {
     cout << "Dogorithm: " << user.getName() << " ate chocolate." << endl;
 }
 
-void Dogorithm::printChatHistory() {
-    cout << "Dogorithm Chat History:" << endl;
-    ChatRoom::printChatHistory();
+// void Dogorithm::printChatHistory() {
+//     cout << "Dogorithm Chat History:" << endl;
+//     ChatRoom::printChatHistory();
+// }
+
+// void Dogorithm::printUsers() {
+//     cout << "Dogorithm Users:" << endl;
+//     ChatRoom::printUsers();
+// }
+
+Memento* ChatRoom::captureCurrent()
+{
+    return new Memento(chatHistory);
 }
 
-void Dogorithm::printUsers() {
-    cout << "Dogorithm Users:" << endl;
-    ChatRoom::printUsers();
+void ChatRoom::undoAction(Memento* prev)
+{
+    clearHistory();
+    chatHistory = prev->getMemento();
+}
+
+void ChatRoom::clearHistory()
+{
+    chatHistory.getVector()->clear();
 }

@@ -3,11 +3,13 @@
 
 #include "Users.h"
 #include "StepFather.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
 
+class Memento;
 class ChatRoom {
     protected:
         VectorFather<Users> users;
@@ -17,8 +19,11 @@ class ChatRoom {
         virtual void sendMessage(string message, Users fromUser);
         virtual void saveMessage(string message, Users fromUser);
         virtual void removeUser(Users fromUser);
-        virtual void printChatHistory();
-        virtual void printUsers();
+        void printChatHistory();
+        void printUsers();
+        Memento* captureCurrent();
+        void undoAction(Memento* prev);
+        void clearHistory();
 };
 
 class CtrlCat : public ChatRoom {
@@ -29,8 +34,6 @@ class CtrlCat : public ChatRoom {
         void sendMessage(string message, Users fromUser) override;
         void saveMessage(string message, Users fromUser) override;
         void removeUser(Users fromUser) override;
-        void printChatHistory() override;
-        void printUsers() override;
 };
 
 class Dogorithm : public ChatRoom {
@@ -41,8 +44,6 @@ class Dogorithm : public ChatRoom {
         void sendMessage(string message, Users fromUser) override;
         void saveMessage(string message, Users fromUser) override;
         void removeUser(Users fromUser) override;
-        void printChatHistory() override;
-        void printUsers() override;
 };
 
 #endif

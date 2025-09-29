@@ -1,6 +1,6 @@
 
 filesToDelete =  TestingMain Command ChatRoom Users
-filesToCompile =  TestingMain.cpp Command.cpp ChatRoom.cpp Users.cpp
+filesToCompile =  TestingMain.cpp Command.cpp ChatRoom.cpp Users.cpp Memento.cpp Caretaker.cpp
 filesInCoverageReport =  TestingMain Command ChatRoom Users
 
 main:

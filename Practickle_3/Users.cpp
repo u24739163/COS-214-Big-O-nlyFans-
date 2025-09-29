@@ -2,13 +2,13 @@
 #include "Users.h"
 #include "Command.h"
 
-void Users::send(string message, ChatRoom& room) {
-    addCommand(new SendMessageCommand(&room, this, message));
-    addCommand(new LogMessageCommand(&room, this, message));
+void Users::send(string message, ChatRoom* room) {
+    addCommand(new SendMessageCommand(room, this, message));
+    addCommand(new LogMessageCommand(room, this, message));
     executeAll();
 }
 
-void Users::receive(string message, Users fromUser, ChatRoom& room) {
+void Users::receive(string message, Users fromUser, ChatRoom* room) {
     cout << name << " received a message from " << fromUser.getName() << " in chat room: " << message << endl;
 }
 
