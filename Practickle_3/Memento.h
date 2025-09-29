@@ -1,7 +1,7 @@
 /**
  * @file Memento.h
  * @brief Memento pattern implementation for state preservation
- * @author Your Name
+ * @author Mulondi Makhado
  * @date 2025-09-29
  */
 #ifndef MEMENTO_H

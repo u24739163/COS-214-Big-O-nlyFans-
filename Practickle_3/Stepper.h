@@ -1,7 +1,7 @@
 /**
  * @file Stepper.h
  * @brief Iterator pattern implementation for traversing collections
- * @author Your Name
+ * @author Micheal Neto
  * @date 2025-09-29
  */
 #ifndef STEPPER_H

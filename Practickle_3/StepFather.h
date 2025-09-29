@@ -1,7 +1,7 @@
 /**
  * @file StepFather.h
  * @brief Abstract container classes with iterator support
- * @author Your Name
+ * @author Micheal Neto
  * @date 2025-09-29
  */
 #ifndef STEPFATHER_H

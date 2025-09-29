@@ -1,7 +1,7 @@
 /**
  * @file Command.h
  * @brief Command pattern implementation for chat room operations
- * @author Your Name
+ * @author Micheal Neto
  * @date 2025-09-29
  */
 #ifndef COMMAND_H

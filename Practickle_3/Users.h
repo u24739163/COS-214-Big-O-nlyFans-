@@ -1,7 +1,7 @@
 /**
  * @file Users.h
  * @brief User classes implementing different user types for the chat system
- * @author Your Name
+ * @author Micheal Neto
  * @date 2025-09-29
  */
 #ifndef USER_H
