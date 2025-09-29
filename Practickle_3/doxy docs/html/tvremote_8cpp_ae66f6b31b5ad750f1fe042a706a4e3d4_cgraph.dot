@@ -1,0 +1,12 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TVRemote::channelChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTVRemote.html#a1f17dba24bd5963c231dd1e974e8c615",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TVRemote::onPushed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTVRemote.html#a0e19739174d0fc4fbb09739b097b8d0d",tooltip=" "];
+}

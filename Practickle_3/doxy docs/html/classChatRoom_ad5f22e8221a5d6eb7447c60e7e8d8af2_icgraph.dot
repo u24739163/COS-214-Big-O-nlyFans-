@@ -1,0 +1,10 @@
+digraph "ChatRoom::saveMessage"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="ChatRoom::saveMessage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Save a message to the chat history."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LogMessageCommand::\lexecute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLogMessageCommand.html#a3be555c3679074b6644bc058fbc6c683",tooltip="Execute the log message operation."];
+}

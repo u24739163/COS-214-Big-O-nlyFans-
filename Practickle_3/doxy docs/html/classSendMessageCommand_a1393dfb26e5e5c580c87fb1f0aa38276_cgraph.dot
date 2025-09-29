@@ -1,0 +1,24 @@
+digraph "SendMessageCommand::execute"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SendMessageCommand\l::execute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Execute the send message operation."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ChatRoom::sendMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html#a152eb0249ccc3a3d15c516c20f0655da",tooltip="Send a message from a user to the chat room."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VectorFather::createStepper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVectorFather.html#ad7775ccd733815aa48eb0b8cc5ebffd7",tooltip="Create a stepper iterator for this vector."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Stepper::current",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStepper.html#a16d93afdcdc7190e84904b8904c5a8bd",tooltip="Get the current element without advancing."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Stepper::first",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStepper.html#aebd518b8673631e25056bb9fd7022c98",tooltip="Move to and return the first element."];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Stepper::hasNext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStepper.html#a7fe293586b963c65e2af4ae206c2e2ed",tooltip="Check if there are more elements to iterate over."];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Stepper::next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStepper.html#af58e5f738012158ed81b91c9e306008f",tooltip="Move to the next element in the collection."];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Users::receive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUsers.html#ae7c1e816b6eaa92486b200f2dcb0c6f5",tooltip="Receive a message from another user."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Users::getName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classUsers.html#aef65d9acf991a4073417fa84b3a9847c",tooltip="Get the user's display name."];
+}

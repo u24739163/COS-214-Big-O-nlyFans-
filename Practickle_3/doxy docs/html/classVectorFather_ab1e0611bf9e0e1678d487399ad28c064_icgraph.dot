@@ -1,0 +1,27 @@
+digraph "VectorFather::addItem"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="VectorFather::addItem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Add an item to the end of the vector."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$IteratorDemo_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ChatRoom::registerUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html#a78689ed978a1454993447bf7ffdff744",tooltip="Register a new user to the chat room."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CtrlCat::registerUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCtrlCat.html#af03b24a407bd58a7cb2ef7a87077d4a8",tooltip="Register a new user to the chat room."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$TestingMain_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Dogorithm::registerUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDogorithm.html#a1d4a7936e9665825390f6652159c55d7",tooltip="Register a new user to the chat room."];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ChatRoom::saveMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html#ad5f22e8221a5d6eb7447c60e7e8d8af2",tooltip="Save a message to the chat history."];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="LogMessageCommand::\lexecute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLogMessageCommand.html#a3be555c3679074b6644bc058fbc6c683",tooltip="Execute the log message operation."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CtrlCat::saveMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCtrlCat.html#a7b92b7c8deb42b18b55747f5810130b7",tooltip="Save a message to the chat history."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Dogorithm::saveMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDogorithm.html#a9dce9907d8c2552f17e75e2f2a1b1557",tooltip="Save a message to the chat history."];
+}

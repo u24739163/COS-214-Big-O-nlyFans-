@@ -1,0 +1,14 @@
+digraph "ChatRoom::sendMessage"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="ChatRoom::sendMessage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Send a message from a user to the chat room."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SendMessageCommand\l::execute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSendMessageCommand.html#a1393dfb26e5e5c580c87fb1f0aa38276",tooltip="Execute the send message operation."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CtrlCat::sendMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCtrlCat.html#a2ed0c39ec284623d2fc58637e3af129e",tooltip="Send a message from a user to the chat room."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Dogorithm::sendMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDogorithm.html#aadada81b37e948ed025aa56e106c2c08",tooltip="Send a message from a user to the chat room."];
+}

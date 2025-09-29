@@ -1,0 +1,14 @@
+digraph "ChatRoom::undoAction"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ChatRoom::undoAction",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Restore the chat room to a previous state."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ChatRoom::clearHistory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html#a8578bd9082f3068d10b06842e2e5ccb1",tooltip="Clear the chat history."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VectorFather::getVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVectorFather.html#a3771623fd65c9c57cb3bf56b8d1c38f6",tooltip="Get direct access to the internal vector."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Memento::getMemento",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMemento.html#aad376a97a9e5ff8ad7a5d26d3b6b4daa",tooltip="Get the preserved chat history."];
+}
