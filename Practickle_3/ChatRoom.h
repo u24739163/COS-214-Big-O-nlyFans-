@@ -26,6 +26,12 @@ class ChatRoom {
     protected:
         VectorFather<Users> users; ///< Collection of users in the chat room
         VectorFather<string> chatHistory; ///< Collection of chat messages
+        /**
+         * @brief Check if a user is registered in this chat room
+         * @param user The user to check
+         * @return true if user is registered, false otherwise
+         */
+        bool isUserRegistered(Users user);
     public:
         /**
          * @brief Register a new user to the chat room
@@ -83,9 +89,27 @@ class CtrlCat : public ChatRoom {
     private:
 
     public:
+        /**
+         * @brief Register a new user to the CtrlCat chat room
+         * @param user The user to register
+         */
         void registerUser(Users user) override;
+        /**
+         * @brief Send a message in the CtrlCat chat room
+         * @param message The message to send
+         * @param fromUser The user sending the message
+         */
         void sendMessage(string message, Users fromUser) override;
+        /**
+         * @brief Save a message to the CtrlCat chat history
+         * @param message The message to save
+         * @param fromUser The user who sent the message
+         */
         void saveMessage(string message, Users fromUser) override;
+        /**
+         * @brief Remove a user from the CtrlCat chat room
+         * @param fromUser The user to remove
+         */
         void removeUser(Users fromUser) override;
 };
 /**
@@ -98,9 +122,27 @@ class Dogorithm : public ChatRoom {
     private:
     
     public:
+        /**
+         * @brief Register a new user to the Dogorithm chat room
+         * @param user The user to register
+         */
         void registerUser(Users user) override;
+        /**
+         * @brief Send a message in the Dogorithm chat room
+         * @param message The message to send
+         * @param fromUser The user sending the message
+         */
         void sendMessage(string message, Users fromUser) override;
+        /**
+         * @brief Save a message to the Dogorithm chat history
+         * @param message The message to save
+         * @param fromUser The user who sent the message
+         */
         void saveMessage(string message, Users fromUser) override;
+        /**
+         * @brief Remove a user from the Dogorithm chat room
+         * @param fromUser The user to remove
+         */
         void removeUser(Users fromUser) override;
 };
 

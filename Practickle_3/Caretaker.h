@@ -26,11 +26,13 @@ class Caretaker {
          * @return Pointer to the most recently saved Memento object.
          */
         Memento* getMemento() const;
-    private:
+
         /**
-         * @brief List of saved Memento objects.
+         * @brief Destructor to clean up allocated Memento objects.
          */
-        list<Memento*> savedMementos;
+        ~Caretaker();
+    private:
+        list<Memento*> savedMementos; ///< List of saved Memento objects
 };
 
 #endif

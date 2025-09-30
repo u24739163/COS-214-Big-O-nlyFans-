@@ -19,6 +19,7 @@ void Users::addCommand(Command* command) {
 void Users::executeAll() {
     for (Command* command : commandQueue) {
         command->execute();
+        delete command; 
     }
     commandQueue.clear();
 }

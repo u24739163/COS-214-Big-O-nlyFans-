@@ -19,6 +19,20 @@
  * restore chat messages for undo functionality.
  */
 class Memento {
+    private:
+        friend class ChatRoom;  ///< Allow ChatRoom to access private members
+        
+        VectorFather<string> history;  ///< Stored chat history state
+        
+        /**
+         * @brief Private constructor for Memento
+         * @param elements The chat history to preserve
+         * 
+         * Creates a memento with the specified chat history.
+         * Only ChatRoom can create Memento objects due to
+         * the private constructor and friend relationship.
+         */
+        Memento(VectorFather<string> elements);
     public:
         /**
          * @brief Get the preserved chat history
@@ -37,20 +51,6 @@ class Memento {
          */
         ~Memento();
     
-    private:
-        friend class ChatRoom;  ///< Allow ChatRoom to access private members
-        
-        VectorFather<string> history;  ///< Stored chat history state
-        
-        /**
-         * @brief Private constructor for Memento
-         * @param elements The chat history to preserve
-         * 
-         * Creates a memento with the specified chat history.
-         * Only ChatRoom can create Memento objects due to
-         * the private constructor and friend relationship.
-         */
-        Memento(VectorFather<string> elements);
 };
 
 #endif

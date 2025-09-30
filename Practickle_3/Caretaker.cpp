@@ -9,3 +9,10 @@ void Caretaker::addMemento(Memento* memento) {
 Memento* Caretaker::getMemento() const {
     return savedMementos.empty() ? NULL : savedMementos.back();
 }
+
+Caretaker::~Caretaker() {
+    for (Memento* memento : savedMementos) {
+        delete memento;
+    }
+    savedMementos.clear();
+}
