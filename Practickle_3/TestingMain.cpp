@@ -4,14 +4,7 @@
 
 int main() 
 {
-    cout << "=== CHAT ROOM SYSTEM DEMO ===" << endl;
-    cout << "Demonstrating Mediator, Iterator, Command, and Memento patterns" << endl << endl;
-
-    // ============================================
-    // 1. CREATE USERS (Different user types)
-    // ============================================
     cout << "1. CREATING USERS" << endl;
-    cout << "=================" << endl;
     Michael user1("Alice");
     Mulondi user2("Bob");
     Mundael user3("Charlie");
@@ -22,18 +15,12 @@ int main()
          << user2.getName() << " (Mulondi), " << user3.getName() << " (Mundael), "
          << user4.getName() << " (Mulondi), " << user5.getName() << " (Michael)" << endl << endl;
 
-    // ============================================
-    // 2. CREATE CHAT ROOMS (Mediator Pattern)
-    // ============================================
     cout << "2. CREATING CHAT ROOMS (Mediator Pattern)" << endl;
     cout << "=========================================" << endl;
     CtrlCat* catRoom = new CtrlCat();
     Dogorithm* dogRoom = new Dogorithm();
     cout << "Created CtrlCat and Dogorithm chat rooms" << endl << endl;
 
-    // ============================================
-    // 3. REGISTER USERS (Iterator Pattern Demo)
-    // ============================================
     cout << "3. REGISTERING USERS (Iterator Pattern in action)" << endl;
     cout << "================================================" << endl;
     cout << "Registering users to CtrlCat room:" << endl;
