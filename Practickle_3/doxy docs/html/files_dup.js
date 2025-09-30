@@ -16,7 +16,7 @@ var files_dup =
       [ "SendMessageCommand", "classSendMessageCommand.html", "classSendMessageCommand" ],
       [ "LogMessageCommand", "classLogMessageCommand.html", "classLogMessageCommand" ]
     ] ],
-    [ "IteratorDemo.cpp", "IteratorDemo_8cpp.html", "IteratorDemo_8cpp" ],
+    [ "DemoMain.cpp", "DemoMain_8cpp.html", "DemoMain_8cpp" ],
     [ "Memento.cpp", "Memento_8cpp.html", null ],
     [ "Memento.h", "Memento_8h.html", [
       [ "Memento", "classMemento.html", "classMemento" ]
@@ -32,7 +32,6 @@ var files_dup =
       [ "VectorStepper", "classVectorStepper.html", "classVectorStepper" ]
     ] ],
     [ "TestingMain.cpp", "TestingMain_8cpp.html", "TestingMain_8cpp" ],
-    [ "tvremote.cpp", "tvremote_8cpp.html", "tvremote_8cpp" ],
     [ "Users.cpp", "Users_8cpp.html", null ],
     [ "Users.h", "Users_8h.html", [
       [ "Users", "classUsers.html", "classUsers" ],

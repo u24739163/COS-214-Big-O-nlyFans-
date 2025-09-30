@@ -10,7 +10,7 @@ digraph "VectorFather::getVector"
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="ChatRoom::undoAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html#aaa4347c88e92e7a4be51edece90d8ab9",tooltip="Restore the chat room to a previous state."];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$TestingMain_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$DemoMain_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="ChatRoom::printChatHistory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html#a627fe0f67aeb432f6670865ae76aba82",tooltip="Print the chat history."];
   Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isempty_154',['isEmpty',['../classStepFather.html#a3cb5474d52686b2782fc54647f779aa6',1,'StepFather::isEmpty()'],['../classVectorFather.html#afbf969a7af2500d6a4ab717fcbed17be',1,'VectorFather::isEmpty()']]]
+  ['hasnext_153',['hasNext',['../classStepper.html#a7fe293586b963c65e2af4ae206c2e2ed',1,'Stepper::hasNext()'],['../classVectorStepper.html#a8fcb7399b24dab96203da9ba57d56b9c',1,'VectorStepper::hasNext()']]]
 ];

@@ -5,5 +5,5 @@ digraph "Dogorithm"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="{Dogorithm\n||+ registerUser()\l+ sendMessage()\l+ saveMessage()\l+ removeUser()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Concrete implementation of ChatRoom for the Dogorithm chat room."];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{ChatRoom\n|# users\l# chatHistory\l|+ registerUser()\l+ sendMessage()\l+ saveMessage()\l+ removeUser()\l+ printChatHistory()\l+ printUsers()\l+ captureCurrent()\l+ undoAction()\l+ clearHistory()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html",tooltip="Abstract base class for chat room implementations using the Mediator design pattern."];
+  Node2 [label="{ChatRoom\n|# users\l# chatHistory\l|+ registerUser()\l+ sendMessage()\l+ saveMessage()\l+ removeUser()\l+ printChatHistory()\l+ printUsers()\l+ captureCurrent()\l+ undoAction()\l+ clearHistory()\l# isUserRegistered()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html",tooltip="Abstract base class for chat room implementations using the Mediator design pattern."];
 }

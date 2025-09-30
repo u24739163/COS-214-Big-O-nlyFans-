@@ -7,8 +7,6 @@ var hierarchy =
     ] ],
     [ "Command", "classCommand.html", [
       [ "LogMessageCommand", "classLogMessageCommand.html", null ],
-      [ "NextChannelCommand", "classNextChannelCommand.html", null ],
-      [ "OnOffCommand", "classOnOffCommand.html", null ],
       [ "SendMessageCommand", "classSendMessageCommand.html", null ]
     ] ],
     [ "Memento", "classMemento.html", null ],
@@ -24,8 +22,6 @@ var hierarchy =
     [ "Stepper< T >", "classStepper.html", [
       [ "VectorStepper< T >", "classVectorStepper.html", null ]
     ] ],
-    [ "TV", "classTV.html", null ],
-    [ "TVRemote", "classTVRemote.html", null ],
     [ "Users", "classUsers.html", [
       [ "Michael", "classMichael.html", null ],
       [ "Mulondi", "classMulondi.html", null ],

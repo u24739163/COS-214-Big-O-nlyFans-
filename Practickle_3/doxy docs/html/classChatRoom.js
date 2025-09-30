@@ -2,6 +2,7 @@ var classChatRoom =
 [
     [ "captureCurrent", "classChatRoom.html#a537f3959b75f5b7fde8812b8971d3201", null ],
     [ "clearHistory", "classChatRoom.html#a8578bd9082f3068d10b06842e2e5ccb1", null ],
+    [ "isUserRegistered", "classChatRoom.html#a13be09c36fafa376593e7be396403d73", null ],
     [ "printChatHistory", "classChatRoom.html#a627fe0f67aeb432f6670865ae76aba82", null ],
     [ "printUsers", "classChatRoom.html#ad0236773e963c393648a57ff5848351c", null ],
     [ "registerUser", "classChatRoom.html#a78689ed978a1454993447bf7ffdff744", null ],
