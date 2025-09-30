@@ -8,9 +8,10 @@ digraph "Stepper::getCurrentIndex"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="ChatRoom::removeUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChatRoom.html#afbc5d283554f1603876e18b090033f04",tooltip="Remove a user from the chat room."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="CtrlCat::removeUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCtrlCat.html#af4d66e652688fe4c19d7fa9eb777f29b",tooltip="Remove a user from the chat room."];
-  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="Dogorithm::removeUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDogorithm.html#a77afce2e7d63306dc918ae11e9de4b2f",tooltip="Remove a user from the chat room."];
-  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$TestingMain_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node3 [label="CtrlCat::removeUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCtrlCat.html#af4d66e652688fe4c19d7fa9eb777f29b",tooltip="Remove a user from the CtrlCat chat room."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$DemoMain_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Dogorithm::removeUser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDogorithm.html#a77afce2e7d63306dc918ae11e9de4b2f",tooltip="Remove a user from the Dogorithm chat room."];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

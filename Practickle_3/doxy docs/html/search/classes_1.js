@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dogorithm_95',['Dogorithm',['../classDogorithm.html',1,'']]]
+  ['dogorithm_99',['Dogorithm',['../classDogorithm.html',1,'']]]
 ];

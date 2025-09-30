@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['chathistory_186',['chatHistory',['../classChatRoom.html#a2ba8f16b4e6bec5c5a22e861adecef13',1,'ChatRoom']]],
-  ['chatrooms_187',['chatRooms',['../classUsers.html#adec6a321010532f44cfd05e236691639',1,'Users']]],
-  ['commandqueue_188',['commandQueue',['../classUsers.html#ae368d9f674761760c99af5794ed56e48',1,'Users']]]
+  ['al_185',['al',['../valgrind_8txt.html#a34f856ffd258176ff2729e534985a68f',1,'valgrind.txt']]],
+  ['allocated_186',['allocated',['../valgrind_8txt.html#a4c5e000a835e65193d7ffd6071b7766c',1,'valgrind.txt']]]
 ];

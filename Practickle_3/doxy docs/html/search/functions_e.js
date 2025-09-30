@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['savemessage_172',['saveMessage',['../classChatRoom.html#ad5f22e8221a5d6eb7447c60e7e8d8af2',1,'ChatRoom::saveMessage()'],['../classCtrlCat.html#a7b92b7c8deb42b18b55747f5810130b7',1,'CtrlCat::saveMessage()'],['../classDogorithm.html#a9dce9907d8c2552f17e75e2f2a1b1557',1,'Dogorithm::saveMessage()']]],
-  ['send_173',['send',['../classUsers.html#ab3e09825cf2d9f82870b6abded49c782',1,'Users']]],
-  ['sendmessage_174',['sendMessage',['../classChatRoom.html#a152eb0249ccc3a3d15c516c20f0655da',1,'ChatRoom::sendMessage()'],['../classCtrlCat.html#a2ed0c39ec284623d2fc58637e3af129e',1,'CtrlCat::sendMessage()'],['../classDogorithm.html#aadada81b37e948ed025aa56e106c2c08',1,'Dogorithm::sendMessage()']]],
-  ['sendmessagecommand_175',['SendMessageCommand',['../classSendMessageCommand.html#ab1cca00cd7c54ca8e0b9969b9c2ff93d',1,'SendMessageCommand']]]
+  ['receive_167',['receive',['../classUsers.html#ae7c1e816b6eaa92486b200f2dcb0c6f5',1,'Users']]],
+  ['registeruser_168',['registerUser',['../classChatRoom.html#a78689ed978a1454993447bf7ffdff744',1,'ChatRoom::registerUser()'],['../classCtrlCat.html#af03b24a407bd58a7cb2ef7a87077d4a8',1,'CtrlCat::registerUser()'],['../classDogorithm.html#a1d4a7936e9665825390f6652159c55d7',1,'Dogorithm::registerUser()']]],
+  ['removeitem_169',['removeItem',['../classStepFather.html#a1056e608f734975f9a42d32133160d26',1,'StepFather::removeItem()'],['../classVectorFather.html#a1880e8492b41517286a9cb558085e2cb',1,'VectorFather::removeItem()']]],
+  ['removeuser_170',['removeUser',['../classChatRoom.html#afbc5d283554f1603876e18b090033f04',1,'ChatRoom::removeUser()'],['../classCtrlCat.html#af4d66e652688fe4c19d7fa9eb777f29b',1,'CtrlCat::removeUser()'],['../classDogorithm.html#a77afce2e7d63306dc918ae11e9de4b2f',1,'Dogorithm::removeUser()']]]
 ];

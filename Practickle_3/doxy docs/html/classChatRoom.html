@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chat Room Application: ChatRoom Class Reference</title>
+<title>PetSpace: ChatRoom Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Chat Room Application
+   <div id="projectname">PetSpace
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">A chat room system implementing Mediator, Iterator, Command, and Memento design patterns</div>
@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classChatRoom.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classChatRoom-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -96,16 +97,6 @@ $(document).ready(function(){initNavTree('classChatRoom.html',''); initResizable
  <a href="classChatRoom.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ChatRoom_8h_source.html">ChatRoom.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for ChatRoom:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom__inherit__graph.png" border="0" usemap="#ChatRoom_inherit__map" alt="Inheritance graph"/></div>
-</div>
-<div class="dynheader">
-Collaboration diagram for ChatRoom:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom__coll__graph.png" border="0" usemap="#ChatRoom_coll__map" alt="Collaboration graph"/></div>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -137,6 +128,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8578bd9082f3068d10b06842e2e5ccb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the chat history.  <a href="classChatRoom.html#a8578bd9082f3068d10b06842e2e5ccb1">More...</a><br /></td></tr>
 <tr class="separator:a8578bd9082f3068d10b06842e2e5ccb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a13be09c36fafa376593e7be396403d73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatRoom.html#a13be09c36fafa376593e7be396403d73">isUserRegistered</a> (<a class="el" href="classUsers.html">Users</a> user)</td></tr>
+<tr class="memdesc:a13be09c36fafa376593e7be396403d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a user is registered in this chat room.  <a href="classChatRoom.html#a13be09c36fafa376593e7be396403d73">More...</a><br /></td></tr>
+<tr class="separator:a13be09c36fafa376593e7be396403d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a7cd0800b6892026e4a9b47a9b5d88103"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVectorFather.html">VectorFather</a>&lt; <a class="el" href="classUsers.html">Users</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatRoom.html#a7cd0800b6892026e4a9b47a9b5d88103">users</a></td></tr>
@@ -167,11 +164,6 @@ Protected Attributes</h2></td></tr>
 
 <p>Capture the current state of the chat room. </p>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classMemento.html" title="Memento class for preserving chat room state.">Memento</a> object representing the current state </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a537f3959b75f5b7fde8812b8971d3201_icgraph.png" border="0" usemap="#classChatRoom_a537f3959b75f5b7fde8812b8971d3201_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -191,16 +183,41 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Clear the chat history. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a8578bd9082f3068d10b06842e2e5ccb1_cgraph.png" border="0" usemap="#classChatRoom_a8578bd9082f3068d10b06842e2e5ccb1_cgraph" alt=""/></div>
+
 </div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a8578bd9082f3068d10b06842e2e5ccb1_icgraph.png" border="0" usemap="#classChatRoom_a8578bd9082f3068d10b06842e2e5ccb1_icgraph" alt=""/></div>
 </div>
+<a id="a13be09c36fafa376593e7be396403d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13be09c36fafa376593e7be396403d73">&#9670;&nbsp;</a></span>isUserRegistered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ChatRoom::isUserRegistered </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUsers.html">Users</a>&#160;</td>
+          <td class="paramname"><em>user</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a user is registered in this chat room. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td>The user to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if user is registered, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -220,16 +237,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Print the chat history. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a627fe0f67aeb432f6670865ae76aba82_cgraph.png" border="0" usemap="#classChatRoom_a627fe0f67aeb432f6670865ae76aba82_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a627fe0f67aeb432f6670865ae76aba82_icgraph.png" border="0" usemap="#classChatRoom_a627fe0f67aeb432f6670865ae76aba82_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -249,16 +256,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Print the list of users in the chat room. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_ad0236773e963c393648a57ff5848351c_cgraph.png" border="0" usemap="#classChatRoom_ad0236773e963c393648a57ff5848351c_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_ad0236773e963c393648a57ff5848351c_icgraph.png" border="0" usemap="#classChatRoom_ad0236773e963c393648a57ff5848351c_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -295,16 +292,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classDogorithm.html#a1d4a7936e9665825390f6652159c55d7">Dogorithm</a>, and <a class="el" href="classCtrlCat.html#af03b24a407bd58a7cb2ef7a87077d4a8">CtrlCat</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a78689ed978a1454993447bf7ffdff744_cgraph.png" border="0" usemap="#classChatRoom_a78689ed978a1454993447bf7ffdff744_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a78689ed978a1454993447bf7ffdff744_icgraph.png" border="0" usemap="#classChatRoom_a78689ed978a1454993447bf7ffdff744_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -341,16 +328,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classDogorithm.html#a77afce2e7d63306dc918ae11e9de4b2f">Dogorithm</a>, and <a class="el" href="classCtrlCat.html#af4d66e652688fe4c19d7fa9eb777f29b">CtrlCat</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_afbc5d283554f1603876e18b090033f04_cgraph.png" border="0" usemap="#classChatRoom_afbc5d283554f1603876e18b090033f04_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_afbc5d283554f1603876e18b090033f04_icgraph.png" border="0" usemap="#classChatRoom_afbc5d283554f1603876e18b090033f04_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -398,16 +375,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classDogorithm.html#a9dce9907d8c2552f17e75e2f2a1b1557">Dogorithm</a>, and <a class="el" href="classCtrlCat.html#a7b92b7c8deb42b18b55747f5810130b7">CtrlCat</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_ad5f22e8221a5d6eb7447c60e7e8d8af2_cgraph.png" border="0" usemap="#classChatRoom_ad5f22e8221a5d6eb7447c60e7e8d8af2_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_ad5f22e8221a5d6eb7447c60e7e8d8af2_icgraph.png" border="0" usemap="#classChatRoom_ad5f22e8221a5d6eb7447c60e7e8d8af2_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -455,16 +422,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classDogorithm.html#aadada81b37e948ed025aa56e106c2c08">Dogorithm</a>, and <a class="el" href="classCtrlCat.html#a2ed0c39ec284623d2fc58637e3af129e">CtrlCat</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a152eb0249ccc3a3d15c516c20f0655da_cgraph.png" border="0" usemap="#classChatRoom_a152eb0249ccc3a3d15c516c20f0655da_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_a152eb0249ccc3a3d15c516c20f0655da_icgraph.png" border="0" usemap="#classChatRoom_a152eb0249ccc3a3d15c516c20f0655da_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -491,16 +448,6 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_aaa4347c88e92e7a4be51edece90d8ab9_cgraph.png" border="0" usemap="#classChatRoom_aaa4347c88e92e7a4be51edece90d8ab9_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classChatRoom_aaa4347c88e92e7a4be51edece90d8ab9_icgraph.png" border="0" usemap="#classChatRoom_aaa4347c88e92e7a4be51edece90d8ab9_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>

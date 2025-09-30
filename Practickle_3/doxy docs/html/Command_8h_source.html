@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chat Room Application: Command.h Source File</title>
+<title>PetSpace: Command.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Chat Room Application
+   <div id="projectname">PetSpace
    &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">A chat room system implementing Mediator, Iterator, Command, and Memento design patterns</div>
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('Command_8h_source.html',''); initResiz
 <div class="ttc" id="aclassSendMessageCommand_html_ab1cca00cd7c54ca8e0b9969b9c2ff93d"><div class="ttname"><a href="classSendMessageCommand.html#ab1cca00cd7c54ca8e0b9969b9c2ff93d">SendMessageCommand::SendMessageCommand</a></div><div class="ttdeci">SendMessageCommand(ChatRoom *chatRoom, Users *user, string msg)</div><div class="ttdoc">Constructor for SendMessageCommand.</div><div class="ttdef"><b>Definition:</b> Command.h:62</div></div>
 <div class="ttc" id="aclassCommand_html_a21dc372c4c13f6c1fc91751b8d94c916"><div class="ttname"><a href="classCommand.html#a21dc372c4c13f6c1fc91751b8d94c916">Command::message</a></div><div class="ttdeci">string message</div><div class="ttdoc">The message content for the command.</div><div class="ttdef"><b>Definition:</b> Command.h:26</div></div>
 <div class="ttc" id="aCommand_8h_html"><div class="ttname"><a href="Command_8h.html">Command.h</a></div><div class="ttdoc">Command pattern implementation for chat room operations.</div></div>
-<div class="ttc" id="aclassChatRoom_html_ad5f22e8221a5d6eb7447c60e7e8d8af2"><div class="ttname"><a href="classChatRoom.html#ad5f22e8221a5d6eb7447c60e7e8d8af2">ChatRoom::saveMessage</a></div><div class="ttdeci">virtual void saveMessage(string message, Users fromUser)</div><div class="ttdoc">Save a message to the chat history.</div><div class="ttdef"><b>Definition:</b> ChatRoom.cpp:30</div></div>
+<div class="ttc" id="aclassChatRoom_html_ad5f22e8221a5d6eb7447c60e7e8d8af2"><div class="ttname"><a href="classChatRoom.html#ad5f22e8221a5d6eb7447c60e7e8d8af2">ChatRoom::saveMessage</a></div><div class="ttdeci">virtual void saveMessage(string message, Users fromUser)</div><div class="ttdoc">Save a message to the chat history.</div><div class="ttdef"><b>Definition:</b> ChatRoom.cpp:52</div></div>
 <div class="ttc" id="aclassCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">Abstract base class for implementing the Command pattern.</div><div class="ttdef"><b>Definition:</b> Command.h:23</div></div>
 <div class="ttc" id="aclassChatRoom_html"><div class="ttname"><a href="classChatRoom.html">ChatRoom</a></div><div class="ttdoc">Abstract base class for chat room implementations using the Mediator design pattern.</div><div class="ttdef"><b>Definition:</b> ChatRoom.h:25</div></div>
 <div class="ttc" id="aclassCommand_html_ab75a46592852de08c13f89ac5431af41"><div class="ttname"><a href="classCommand.html#ab75a46592852de08c13f89ac5431af41">Command::Command</a></div><div class="ttdeci">Command(ChatRoom *chatRoom, Users *user, string msg)</div><div class="ttdoc">Constructor for Command objects.</div><div class="ttdef"><b>Definition:</b> Command.h:36</div></div>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('Command_8h_source.html',''); initResiz
 <div class="ttc" id="aUsers_8h_html"><div class="ttname"><a href="Users_8h.html">Users.h</a></div><div class="ttdoc">User classes implementing different user types for the chat system.</div></div>
 <div class="ttc" id="aclassLogMessageCommand_html"><div class="ttname"><a href="classLogMessageCommand.html">LogMessageCommand</a></div><div class="ttdoc">Concrete command for logging messages to chat history.</div><div class="ttdef"><b>Definition:</b> Command.h:80</div></div>
 <div class="ttc" id="aclassSendMessageCommand_html_a1393dfb26e5e5c580c87fb1f0aa38276"><div class="ttname"><a href="classSendMessageCommand.html#a1393dfb26e5e5c580c87fb1f0aa38276">SendMessageCommand::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">Execute the send message operation.</div><div class="ttdef"><b>Definition:</b> Command.cpp:5</div></div>
-<div class="ttc" id="aclassChatRoom_html_a152eb0249ccc3a3d15c516c20f0655da"><div class="ttname"><a href="classChatRoom.html#a152eb0249ccc3a3d15c516c20f0655da">ChatRoom::sendMessage</a></div><div class="ttdeci">virtual void sendMessage(string message, Users fromUser)</div><div class="ttdoc">Send a message from a user to the chat room.</div><div class="ttdef"><b>Definition:</b> ChatRoom.cpp:18</div></div>
+<div class="ttc" id="aclassChatRoom_html_a152eb0249ccc3a3d15c516c20f0655da"><div class="ttname"><a href="classChatRoom.html#a152eb0249ccc3a3d15c516c20f0655da">ChatRoom::sendMessage</a></div><div class="ttdeci">virtual void sendMessage(string message, Users fromUser)</div><div class="ttdoc">Send a message from a user to the chat room.</div><div class="ttdef"><b>Definition:</b> ChatRoom.cpp:34</div></div>
 <div class="ttc" id="aclassLogMessageCommand_html_ae9d6ea5f8e6f0ccdcfeef485df56e05b"><div class="ttname"><a href="classLogMessageCommand.html#ae9d6ea5f8e6f0ccdcfeef485df56e05b">LogMessageCommand::LogMessageCommand</a></div><div class="ttdeci">LogMessageCommand(ChatRoom *chatRoom, Users *user, string msg)</div><div class="ttdoc">Constructor for LogMessageCommand.</div><div class="ttdef"><b>Definition:</b> Command.h:88</div></div>
 <div class="ttc" id="aclassUsers_html"><div class="ttname"><a href="classUsers.html">Users</a></div><div class="ttdoc">Abstract base class representing a user in the chat system.</div><div class="ttdef"><b>Definition:</b> Users.h:24</div></div>
 <div class="ttc" id="aclassCommand_html_ac38d7713bb9660a23a752a2a2c938dd5"><div class="ttname"><a href="classCommand.html#ac38d7713bb9660a23a752a2a2c938dd5">Command::room</a></div><div class="ttdeci">ChatRoom * room</div><div class="ttdoc">Pointer to the chat room where command executes.</div><div class="ttdef"><b>Definition:</b> Command.h:25</div></div>
